@@ -22,7 +22,34 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <header
+          style={{
+            backgroundColor: "#1e293b",
+            color: "white",
+            padding: "18px 40px",
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
+          <h2 style={{ margin: 0 }}>DevSpace</h2>
+        </header>
+        {children}
+        <footer
+          style={{
+            backgroundColor: "#0f172a",
+            color: "#cbd5e1",
+            padding: "25px 40px",
+            textAlign: "center",
+            marginTop: "50px",
+          }}
+        >
+          <p style={{ margin: "8px 0 0", fontSize: "14px" }}>
+            Built with Next.js
+          </p>
+        </footer>
+      </body>
     </html>
   );
 }
