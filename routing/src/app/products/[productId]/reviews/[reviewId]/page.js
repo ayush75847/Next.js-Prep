@@ -1,7 +1,10 @@
 import React from "react";
+import { notFound } from "next/navigation";
 
 async function ReviewDetail({ params }) {
   const { productId, reviewId } = await params;
+
+  if(parseInt(reviewId)>1000) return notFound();
 
   return (
     <div>
