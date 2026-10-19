@@ -1,7 +1,10 @@
 import React from "react";
 import Link from "next/link";
 
-function Blog() {
+async function Blog() {
+  await new Promise((resolve)=>{
+    setTimeout(()=> resolve(), 2000) 
+  })
   return (
     <>
       <div>Blog</div>
